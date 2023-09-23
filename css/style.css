@@ -1,9 +1,83 @@
-/* Selector universal */
-*{
-    margin: 1px;
+* {
+    /* La propiedad border-box recalcula el ancho de una caja para que el width sea la estrictamente la suma de border + padding + ancho o altura que sea necesario para que se cumpla. */
+    box-sizing: border-box;
 }
 
-h1{
-    color: red;
+.header_menu {grid-area: menu;}
+
+.main_servicios {grid-area: servicios;}
+
+.main_profesionales {grid-area: profesionales;}
+
+.main_turnos {grid-area: turnos;}
+
+.main_contacto {grid-area: contacto;}
+
+.footer {grid-area: footer;}
+
+.contenedor_principal{
+    width: 90%;
+    max-width: 1000px;
+    margin: 20px auto;
+    display: grid;
+    gap: 20px;
+    grid-template-areas:
+        "menu menu menu menu"
+        "servicios servicios servicios profesionales"
+        "turnos turnos turnos profesionales"
+        "contacto contacto contacto profesionales"
+        "footer footer footer footer";
+    grid-gap: 10px;
+    background-color: #2196F3;
+    padding: 10px;
 }
 
+/* DISEÑO RESPONSIVE PARA TABLET */
+@media screen and (max-width: 768px){
+    .contenedor_principal{
+        grid-template-areas:
+        "menu menu menu"
+        "servicios servicios profesionales"
+        "turnos turnos profesionales"
+        "contacto contacto contacto"
+        "footer footer footer";
+    }
+}
+
+/* DISEÑO RESPONSIVE PARA CELULAR */
+@media screen and (max-width: 480px){
+    .contenedor_principal{
+        grid-template-areas: 
+        "menu"
+        "servicios"
+        "profesionales"
+        "turnos"
+        "contacto"
+        "footer";
+    }
+}
+
+.contenedor_principal > div {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 20px;
+}
+
+/* DISEÑO DEL MENU -- ver de poder hacerlo con clases */
+nav ul {
+    list-style: none;
+    overflow: hidden; 
+}
+nav ul li {
+    float: left;
+}
+nav ul li a {
+    display: block; 
+    padding: 20px;
+    color: #000000;
+    text-decoration: none;
+}
+nav ul li a:hover {
+    background: #46423d;
+}
