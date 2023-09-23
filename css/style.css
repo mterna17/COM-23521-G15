@@ -7,7 +7,9 @@
 
 .main_servicios {grid-area: servicios;}
 
-.main_profesionales {grid-area: profesionales;}
+.main_nosotros {grid-area: nosotros;}
+
+.main_osocial {grid-area: osocial;}
 
 .main_turnos {grid-area: turnos;}
 
@@ -23,12 +25,13 @@
     gap: 20px;
     grid-template-areas:
         "menu menu menu menu"
-        "servicios servicios servicios profesionales"
-        "turnos turnos turnos profesionales"
-        "contacto contacto contacto profesionales"
+        "nosotros nosotros osocial osocial"
+        "servicios servicios osocial osocial"
+        "turnos turnos osocial osocial"
+        "contacto contacto contacto contacto"
         "footer footer footer footer";
     grid-gap: 10px;
-    background-color: #2196F3;
+    background-color: rgb(211, 211, 211);
     padding: 10px;
 }
 
@@ -37,8 +40,9 @@
     .contenedor_principal{
         grid-template-areas:
         "menu menu menu"
-        "servicios servicios profesionales"
-        "turnos turnos profesionales"
+        "nosotros nosotros nosotros"
+        "servicios servicios osocial"
+        "turnos turnos osocial"
         "contacto contacto contacto"
         "footer footer footer";
     }
@@ -49,8 +53,9 @@
     .contenedor_principal{
         grid-template-areas: 
         "menu"
+        "nosotros"
         "servicios"
-        "profesionales"
+        "osocial"
         "turnos"
         "contacto"
         "footer";
@@ -59,25 +64,26 @@
 
 .contenedor_principal > div {
     background-color: rgba(255, 255, 255, 0.8);
+    /* el cuarto parametro es la trasparencia, por lo que se ve un poco el color del contendero principal definido mas arriba */
     text-align: center;
     padding: 20px 0;
     font-size: 20px;
 }
 
 /* DISEÑO DEL MENU -- ver de poder hacerlo con clases */
-nav ul {
+.header_menu > nav ul {
     list-style: none;
     overflow: hidden; 
 }
-nav ul li {
+.header_menu > nav ul li {
     float: left;
 }
-nav ul li a {
+.header_menu > nav ul li a {
     display: block; 
-    padding: 20px;
-    color: #000000;
+    padding: 15px;
+    color: rgb(0, 0, 0);
     text-decoration: none;
 }
-nav ul li a:hover {
-    background: #46423d;
+.header_menu > nav ul li a:hover {
+    background: rgb(255, 63, 63);
 }

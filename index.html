@@ -18,60 +18,138 @@
     <div class="contenedor_principal">
 
         <!-- CONTENEDOR PARA HEADER -->
-        <div class="header_menu">
+        <div class="header_menu" id="MENU">
             <nav>
                 <ul>
                     <li>
                         <h2 class="nav_logo">Consultorio</h2>
                     </li>
                     <li>
-                        <a href="#" class="nav_link">Inicio</a>
+                        <a href="#MENU" class="nav_link">Inicio</a>
                     </li>              
                     <li>
-                        <a href="#" class="nav_link">Servicios</a>
+                        <a href="#NOSOTROS" class="nav_link">¿Quienes Somos?</a>
                     </li>
                     <li>
-                        <a href="#" class="nav_link">Profesionales</a>
+                        <a href="#SERVICIOS" class="nav_link">Servicios</a>
                     </li>
                     <li>
-                        <a href="#" class="nav_link">Turnos</a>
+                        <a href="#OBRASOCIAL" class="nav_link">Obras Sociales</a>
                     </li>
                     <li>
-                        <a href="#" class="nav_link">Contacto</a>
+                        <a href="#TURNOS" class="nav_link">Turnos</a>
+                    </li>
+                    <li>
+                        <a href="#CONTACTO" class="nav_link">Contacto</a>
                     </li>
                 </ul>  
             </nav>
         </div>
 
         <!-- CONTENERDO PARA MAIN 1 -->
-        <div class="main_servicios">
+        <div class="main_servicios" id="SERVICIOS">
             Servicios
+            <br>
+            Especialidades médicas
+            <br>
+            <ul>
+                <li>Anatomía Patologica</li>
+                <li>Bacteriología</li>
+                <li>Cardiología</li>
+                <li>Clinica Médica</li>
+                <li>Dermatología</li>
+                <li>Ecografía</li>
+                <li>Endocrinología</li>
+                <li>Fisioterapia</li>
+                <li>Flebología</li>
+                <li>Fonoaudiología</li>
+                <li>Gastroenterología</li>
+                <li>Ginecología</li>
+                <li>Laboratorio Químico</li>
+                <li>Urología</li>
+                <li>Nutrición</li>
+                <li>Odontología</li>
+                <li>Oftalmología</li>
+                <li>Otorrinolaringología</li>
+                <li>Psicología</li>
+                <li>Psiquiatría</li>
+                <li>Traumatología</li>
+            </ul>
         </div>
 
         <!-- CONTENERDO PARA MAIN 2 -->
-        <div class="main_profesionales">
-            Profesionales
+        <div class="main_nosotros" id="NOSOTROS">
+            ¿Quienes somos?
+            <br>
+            Nuestro Centro Medico se encuentra ubicado en pleno corazón de la ciudad de Córdoba, lo que permite tener fácil acceso.
+            Nuestra estructura de 550 metros cuadrados, cuenta con 20 consultorios externos, sala de Kinesiología con 3 boxes totalmente equipados, Laboratorio de análisis clínicos y bacteriológicos, 3 consultorios de Odontología y un departamento de Ecografía y Eco Doppler.
+            <!-- Cmbiar el texto, para que no quede como el del ejemplo -->
         </div>
 
         <!-- CONTENERDO PARA MAIN 3 -->
-        <div class="main_turnos">
-            Turnos
+        <div class="main_osocial" id="OBRASOCIAL">
+            Obras Sociales
+            <br>
+            <ul>
+                <li>OSECAC (Sindicato de empleados de comercio)</li>
+                <li>OSDE (Medicina privada)</li>
+                <li>OSPRERA (Sindicato de trabajadores rurales)</li>
+                <li>UPCN (Sindicato de estatales nacionales)</li>
+                <li>UOCRA (Sindicato trabajadores de la construcción)</li>
+                <li>OSPE (Sindicato de petroleros)</li>
+                <li>OSUTHGRA (Sindicato trabajadores gastronomicos y hotleros)</li>
+                <li>ASE (Personal de dirección de empresas)</li>
+                <li>Mutual Sancor (Medicina privada)</li>
+                <li>UOM (Sindicato de trabajadores metalúrgicos)</li>
+            </ul>
         </div>
 
         <!-- CONTENERDO PARA MAIN 4 -->
-        <div class="main_contacto">
-            Contacto
+        <div class="main_turnos" id="TURNOS">
+            Turnos
+        </div>
+
+        <!-- CONTENERDO PARA MAIN 5 -->
+        <div class="main_contacto" id="CONTACTO">
+            <form action="">
+                <fieldset>
+                    <legend>Contacto</legend>
+
+                    <label for="nombre">Nombre y Apellido: </label>
+                    <input type="text" name="nombre" id="nombre" placeholder="Ingrese su nombre...">
+
+                    <br>
+
+                    <label for="mail">Email: </label>
+                    <input type="email" name="email" id="email" placeholder="Ingrese su email...">
+
+                    <br>
+
+                    <label for="mensaje">Mensaje: </label>
+                    <br>
+                    <textarea name="mensaje" id="mensaje" cols="50" rows="10"></textarea>
+                    <br>
+                    <!-- botones -->
+                    <input type="submit" value="Enviar formulario">
+                    <input type="reset" value="Borrar formulario">
+                </fieldset>
+            </form>
+
+            <br>
+            Ubicacion
+            <br>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26274.82920939849!2d-58.42286825180054!3d-34.59521776871684!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccabea17fc80b%3A0x766940296f7cf5cf!2sConsultorios%20Externos!5e0!3m2!1ses!2sar!4v1695494643010!5m2!1ses!2sar" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
 
         <!-- CONTENERDO PARA FOOTER -->
-        <div class="footer">
+        <div class="footer" id="PIE">
             Pie de pagina
         </div>
     </div>
 
 
 
-    <!-- "Vinculo" a JavaScript -->
+    <!-- Vinculo a JavaScript -->
     <script src="./js/app.js"></script>
 </body>
 </html>
