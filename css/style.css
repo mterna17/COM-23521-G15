@@ -11,6 +11,10 @@
 
 .main_osocial {grid-area: osocial;}
 
+.logo_os { max-height: 80px; max-width: 300px ; padding: 10px;} 
+
+.titulo_seccion {max-width: 400px; padding: 20px; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ; color: rgb(6, 6, 78);}
+
 .main_turnos {grid-area: turnos;}
 
 .main_contacto {grid-area: contacto;}
