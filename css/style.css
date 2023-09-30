@@ -7,7 +7,25 @@
 
 .main_servicios {grid-area: servicios;}
 
-.main_nosotros {grid-area: nosotros;}
+.main_nosotros {
+    grid-area: nosotros;
+    text-align: left !important;
+}
+.main_nosotros h2 {
+    font-size: 30px;
+    margin: 15px;
+}
+.main_nosotros h3 {
+    font-size: 20px;
+    margin: 15px;
+}
+.main_nosotros p {
+    font-size: 14px;
+    margin: 15px;
+}
+.main_nosotros .container-dropdown {
+    margin: 10px;
+}
 
 .main_osocial {grid-area: osocial;}
 
@@ -29,7 +47,7 @@
     gap: 20px;
     grid-template-areas:
         "menu menu menu menu"
-        "nosotros nosotros osocial osocial"
+        "nosotros nosotros nosotros nosotros"
         "servicios servicios osocial osocial"
         "turnos turnos osocial osocial"
         "contacto contacto contacto contacto"
