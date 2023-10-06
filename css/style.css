@@ -10,21 +10,42 @@
 .main_nosotros {
     grid-area: nosotros;
     text-align: left !important;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-.main_nosotros h2 {
+.main_nosotros h2{
     font-size: 30px;
     margin: 15px;
+    color: rgb(6, 6, 78);
 }
-.main_nosotros h3 {
+.main_nosotros h3{
     font-size: 20px;
     margin: 15px;
+    color: rgb(6, 6, 78);
 }
-.main_nosotros p {
+.main_nosotros p{
     font-size: 14px;
     margin: 15px;
 }
-.main_nosotros .container-dropdown {
-    margin: 10px;
+.main_nosotros .container-valores{
+    display: flex;
+    justify-content: center;
+}
+.main_nosotros .container-card{
+    margin: 15px;
+    text-align: center;
+    border: 0px solid black;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    width: 30%;
+}
+.main_nosotros .container-card h4{
+    margin: 4px;
+    color: rgb(6, 6, 78);
+}
+.main_nosotros .card-img{
+    margin-top: 20px;
+    width: 60px;
+    height: 50px;
 }
 
 .main_osocial {grid-area: osocial;}
