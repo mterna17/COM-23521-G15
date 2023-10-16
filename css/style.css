@@ -7,8 +7,11 @@
 
 .main_servicios {grid-area: servicios;}
 
-.main_nosotros {
+.section-nosotros {
     grid-area: nosotros;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+.main_nosotros {
     text-align: left !important;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
@@ -91,20 +94,6 @@
     }
 }
 
-/* DISEÑO RESPONSIVE PARA CELULAR */
-@media screen and (max-width: 480px){
-    .contenedor_principal{
-        grid-template-areas: 
-        "menu"
-        "nosotros"
-        "servicios"
-        "osocial"
-        "turnos"
-        "contacto"
-        "footer";
-    }
-}
-
 .contenedor_principal > div {
     background-color: rgba(255, 255, 255, 0.8);
     /* el cuarto parametro es la trasparencia, por lo que se ve un poco el color del contendero principal definido mas arriba */
@@ -129,4 +118,32 @@
 }
 .header_menu > nav ul li a:hover {
     background: rgb(255, 63, 63);
+}
+
+/* DISEÑO RESPONSIVE PARA CELULAR */
+@media screen and (max-width: 480px){
+    .contenedor_principal {
+        /*Le saque el margin y el padding al contenedor principal para usar todo el ancho en el modo celular*/
+        margin: 0;
+        padding: 0;
+        grid-template-areas: 
+        "menu"
+        "nosotros"
+        "servicios"
+        "osocial"
+        "turnos"
+        "contacto"
+        "footer";
+    }
+    body {
+        /*Le saque el margin y el padding al body para usar todo el ancho en el modo celular*/
+        margin: 0;
+        padding: 0;
+    }
+    .main_nosotros .container-valores {
+        flex-direction: column;
+    }
+    .main_nosotros .container-card {
+        width: auto;
+    }
 }
