@@ -36,7 +36,6 @@ body a{
     grid-area: nosotros;
     background-color: rgba(255, 255, 255, 0.8);
 }
-<<<<<<< HEAD
 
 .main_nosotros {
     text-align: left !important;
@@ -45,24 +44,10 @@ body a{
 .main_nosotros h2{
     font-size: 30px;
     margin: 15px;
-=======
-.main_nosotros {
-    text-align: left !important;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-.main_nosotros h2{
-    font-size: 30px;
-    margin: 15px;
-    color: rgb(6, 6, 78);
->>>>>>> f6f6480d61b46deda8d3d5efcb22fe83a416e669
 }
 .main_nosotros h3{
     font-size: 20px;
     margin: 15px;
-<<<<<<< HEAD
-=======
-    color: rgb(6, 6, 78);
->>>>>>> f6f6480d61b46deda8d3d5efcb22fe83a416e669
 }
 .main_nosotros p{
     font-size: 14px;
@@ -92,16 +77,12 @@ body a{
 
 .main_osocial {grid-area: osocial;}
 
-<<<<<<< HEAD
 .main_osocial h2{
     font-size: 30px;
     margin: 15px;
 }
 
 .logo_os { max-height: 80px; max-width: 300px ; padding: 10px;}
-=======
-.logo_os { max-height: 80px; max-width: 300px ; padding: 10px;} 
->>>>>>> f6f6480d61b46deda8d3d5efcb22fe83a416e669
 
 .titulo_seccion {max-width: 400px; padding: 20px; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ; color: rgb(6, 6, 78);}
 
@@ -122,7 +103,7 @@ body a{
     gap: 10px;
     grid-template-areas:
         "menu menu menu menu"
-        "nosotros nosotros nosotros nosotros"
+        "nosotros nosotros osocial osocial"
         "servicios servicios osocial osocial"
         "turnos turnos osocial osocial"
         "contacto contacto contacto contacto"
@@ -142,6 +123,20 @@ body a{
         "turnos turnos osocial"
         "contacto contacto contacto"
         "footer footer footer";
+    }
+}
+
+/* DISEÑO RESPONSIVE PARA CELULAR */
+@media screen and (max-width: 480px){
+    .contenedor_principal{
+        grid-template-areas: 
+        "menu"
+        "nosotros"
+        "servicios"
+        "osocial"
+        "turnos"
+        "contacto"
+        "footer";
     }
 }
 
@@ -182,7 +177,6 @@ body a{
 }
 
 .header_menu > nav ul li a:hover {
-<<<<<<< HEAD
     text-decoration: underline;
 }
 
@@ -356,35 +350,3 @@ div.footer ul li a:hover {
 
     }
 }
-=======
-    background: rgb(255, 63, 63);
-}
-
-/* DISEÑO RESPONSIVE PARA CELULAR */
-@media screen and (max-width: 480px){
-    .contenedor_principal {
-        /*Le saque el margin y el padding al contenedor principal para usar todo el ancho en el modo celular*/
-        margin: 0;
-        padding: 0;
-        grid-template-areas: 
-        "menu"
-        "nosotros"
-        "servicios"
-        "osocial"
-        "turnos"
-        "contacto"
-        "footer";
-    }
-    body {
-        /*Le saque el margin y el padding al body para usar todo el ancho en el modo celular*/
-        margin: 0;
-        padding: 0;
-    }
-    .main_nosotros .container-valores {
-        flex-direction: column;
-    }
-    .main_nosotros .container-card {
-        width: auto;
-    }
-}
->>>>>>> f6f6480d61b46deda8d3d5efcb22fe83a416e669
