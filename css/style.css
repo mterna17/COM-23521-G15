@@ -3,26 +3,104 @@
     box-sizing: border-box;
 }
 
+/* Paleta de colores */
+:root{
+    --colorwhite: rgb(255,255,255);
+    --colorblack: rgb(0,0,0);
+    --color1: rgb(103,142,149);
+    --color2: rgb(182,167,155);
+    --color3: rgb(230,191,174);
+    --color4: rgb(226,226,190);
+    --color5: rgb(212,233,228);
+    --colortexto: rgb(6,6,78);
+}
+
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: var(--colortexto);
+}
+
+body a{
+    color: var(--colortexto);   
+}
+
 .header_menu {grid-area: menu;}
+
+.header_menu h2{
+    color: var(--colortexto);    
+}
 
 .main_servicios {grid-area: servicios;}
 
-.main_nosotros {grid-area: nosotros;}
+.section-nosotros {
+    grid-area: nosotros;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.main_nosotros {
+    text-align: left !important;
+}
+
+.main_nosotros h2{
+    font-size: 30px;
+    margin: 15px;
+}
+.main_nosotros h3{
+    font-size: 20px;
+    margin: 15px;
+}
+.main_nosotros p{
+    font-size: 14px;
+    margin: 15px;
+}
+.main_nosotros .container-valores{
+    display: flex;
+    justify-content: center;
+}
+.main_nosotros .container-card{
+    margin: 15px;
+    text-align: center;
+    border: 0px solid black;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    width: 30%;
+}
+.main_nosotros .container-card h4{
+    margin: 4px;
+    color: rgb(6, 6, 78);
+}
+.main_nosotros .card-img{
+    margin-top: 20px;
+    width: 60px;
+    height: 50px;
+}
 
 .main_osocial {grid-area: osocial;}
 
+.main_osocial h2{
+    font-size: 30px;
+    margin: 15px;
+}
+
+.logo_os { max-height: 80px; max-width: 300px ; padding: 10px;}
+
+.titulo_seccion {max-width: 400px; padding: 20px; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ; color: rgb(6, 6, 78);}
+
 .main_turnos {grid-area: turnos;}
 
-.main_contacto {grid-area: contacto;}
+.main_contacto {
+    grid-area: contacto;
+    background: var(--color2);
+}
 
 .footer {grid-area: footer;}
 
 .contenedor_principal{
-    width: 90%;
-    max-width: 1000px;
-    margin: 20px auto;
     display: grid;
-    gap: 20px;
+    width: 100%;
+    max-width: 1080px;
+    margin: 0 auto;
+    gap: 10px;
     grid-template-areas:
         "menu menu menu menu"
         "nosotros nosotros osocial osocial"
@@ -31,7 +109,7 @@
         "contacto contacto contacto contacto"
         "footer footer footer footer";
     grid-gap: 10px;
-    background-color: rgb(211, 211, 211);
+    background-color: var(--color3);
     padding: 10px;
 }
 
@@ -63,27 +141,212 @@
 }
 
 .contenedor_principal > div {
-    background-color: rgba(255, 255, 255, 0.8);
-    /* el cuarto parametro es la trasparencia, por lo que se ve un poco el color del contendero principal definido mas arriba */
+    background-color: var(--colorwhite);
+    /* el cuarto parametro es la trasparencia, por lo que se ve un poco el color del contenedor principal definido mas arriba */
     text-align: center;
-    padding: 20px 0;
+    padding: 10px;
     font-size: 20px;
+    align-content: center;
 }
 
-/* DISEÑO DEL MENU -- ver de poder hacerlo con clases */
+/* DISEÑO DEL MENU */
+.header_menu{
+    place-content: flex-start;
+}
+
+.header_menu nav{
+    width: 100%;
+    display: flex;
+    place-content: space-between;
+}
+
 .header_menu > nav ul {
     list-style: none;
     overflow: hidden; 
 }
+
 .header_menu > nav ul li {
     float: left;
 }
+
 .header_menu > nav ul li a {
     display: block; 
     padding: 15px;
     color: rgb(0, 0, 0);
     text-decoration: none;
 }
+
 .header_menu > nav ul li a:hover {
-    background: rgb(255, 63, 63);
+    text-decoration: underline;
+}
+
+#menu-ham, #menu-check{
+    display: none;
+}
+
+/* poner en 480px */
+@media only screen and (max-width: 480px){
+    .header_menu h2.nav_logo{
+        margin: 0;
+        color: red;
+        padding: 0;
+    }
+
+    .header_menu{
+        display: flex;
+        place-content: space-between;
+    }
+
+    #menu-check:not(:checked) ~ nav{
+        display: none;
+    }
+
+    #menu-check:checked ~ nav{
+        display: block;
+    }
+
+    #menu-ham{
+        display: block;
+        color: white;
+        background-color: rgb(211, 211, 211);
+        font-size: 1em;
+        font-weight: bold;
+        border: 3px solid rgb(211, 211, 211);
+        border-radius: 0.3em;
+        position: absolute;
+        right: 2em;
+        top: 1.5em;
+        z-index: 9999;
+    }
+
+    #menu-ham:hover{
+        color: red;
+        background-color: rgb(211, 211, 211);
+    }
+
+    #cerrar-menu{
+        display: none;
+    }
+
+    #menu-check:checked ~ label #abrir-menu{
+        display: none;    
+    }
+
+    #menu-check:checked ~ label #cerrar-menu{
+        display: block;
+    }
+
+    .header_menu nav{
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        background-color: rgb(211, 211, 211);
+        padding-top: 1em;
+        padding-right: 5em;
+        opacity: 0.85;
+    }
+
+    .header_menu nav ul a{
+        background: none;
+    }
+
+    .header_menu nav ul, .header_menu nav ul li{
+        display: block;
+        text-align: right;
+    }
+}
+
+div.main_contacto{
+    position: relative;
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+div.main_contacto legend{
+    font-size: 30px;
+    margin: 15px;
+    text-align: left;
+}
+
+div.main_contacto form{
+    text-align: left;
+}
+
+div.main_contacto label, div.main_contacto input{
+    display: block;
+    margin-bottom: 0.5em;
+}
+
+div.main_contacto input#nombre, div.main_contacto input#email, div.main_contacto textarea{
+    width: 100%;
+    padding: 0.8em;
+    margin-bottom: 1em;
+    border-radius: 0.5em;
+    box-sizing: border-box;
+}
+
+div.main_contacto div{
+    width: 45%;
+}
+
+div.main_contacto iframe{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 45%;
+    height: 100%;
+}
+
+div.footer{
+    place-content: flex-start;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+div.footer ul{
+    width: 100%;
+    display: flex;
+    place-content: space-between;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    overflow: hidden;
+}
+
+div.footer ul li {
+    float: left;
+}
+
+div.footer ul li a {
+    display: block; 
+    padding: 0;
+    margin: 0;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 0.5em;
+}
+
+div.footer ul li a:hover {
+    text-decoration: underline;
+}
+
+@media only screen and (max-width: 720px){
+    div.main_contacto{
+        display: block;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    
+    div.main_contacto div{
+        width: 100%;
+    }
+
+    div.main_contacto iframe{
+        position: relative;
+        width: 100%;
+        height: 400px;
+        margin-top: 0.5em;
+
+    }
 }

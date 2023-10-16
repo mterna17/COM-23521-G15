@@ -19,11 +19,16 @@
 
         <!-- CONTENEDOR PARA HEADER -->
         <div class="header_menu" id="MENU">
+            <h2 class="nav_logo">Consultorio Médico</h2>
+            
+            <!-- MENU HAMBURGUESA -->
+            <input type="checkbox" id="menu-check">
+            <label id="menu-ham" for="menu-check">
+                <span id="abrir-menu">&#9776;</span>
+                <span id="cerrar-menu">X</span>
+            </label>
             <nav>
                 <ul>
-                    <li>
-                        <h2 class="nav_logo">Consultorio</h2>
-                    </li>
                     <li>
                         <a href="#MENU" class="nav_link">Inicio</a>
                     </li>              
@@ -45,6 +50,7 @@
                 </ul>  
             </nav>
         </div>
+
 
         <!-- CONTENERDO PARA MAIN 1 -->
         <div class="main_servicios" id="SERVICIOS">
@@ -78,30 +84,71 @@
         </div>
 
         <!-- CONTENERDO PARA MAIN 2 -->
-        <div class="main_nosotros" id="NOSOTROS">
-            ¿Quienes somos?
-            <br>
-            Nuestro Centro Medico se encuentra ubicado en pleno corazón de la ciudad de Córdoba, lo que permite tener fácil acceso.
-            Nuestra estructura de 550 metros cuadrados, cuenta con 20 consultorios externos, sala de Kinesiología con 3 boxes totalmente equipados, Laboratorio de análisis clínicos y bacteriológicos, 3 consultorios de Odontología y un departamento de Ecografía y Eco Doppler.
-            <!-- Cmbiar el texto, para que no quede como el del ejemplo -->
-        </div>
+        <section class="section-nosotros">
+            <div class="main_nosotros" id="NOSOTROS">
+                <h2>¿Quienes somos?</h2>
+                    <p>Somos un consultorio que se desarrolla en el área ambulatoria del Hospital, ofreciendo atención brindada por profesionales médicos de diferentes especialidades con la finalidad de satisfacer la experiencia del paciente, su entorno familiar y el equipo de salud.<br>Nos encontramos comprometidos con nuestros valores a dedicar un cuidado integral de la salud, calidad de atención centrada en las personas y seguridad del paciente, como tambien hacia la comunidad.</p>
+                <h3>Misión</h3>
+                    <p>Promovemos el empoderamiento de las personas en la coproducción de la toma de decisiones, sustentadas en las mejores prácticas, favoreciendo la autonomía y respetando las diversidades.</p>
+                <h3>Visión</h3>
+                    <p>Continuar siendo una institución innovadora comprometido con el desarrollo de gestión integrada por procesos en el marco del sistema de gestión de calidad y el progreso en el respeto con las diversidades.</p>
+                <h3>Valores</h3>
+                    <div class="container-valores">
+                            <div class="container-card">
+                                <div>
+                                    <img class="card-img" src="./media/accesibilidad.png" alt="">
+                                </div>
+                                <div>
+                                    <h4>Accesibilidad</h4>
+                                    <p>Garantizar que cualquier persona pueda disponer y utilizar los servicios en igualdad de condiciones y en función a sus necesidades.</p>
+                                </div>
+                            </div>
+                            <div class="container-card">
+                                <div>
+                                    <img class="card-img" src="./media/transparencia.png" alt="">
+                                </div>
+                                <div>
+                                    <h4>Transparencia</h4>
+                                    <p>Facilitar el acceso a la información, con la convicción de que la información que posee el Estado debe ser accesible y pública garantizando la protección de los datos de las personas que la ley dicta.</p>
+                                </div>
+                            </div>
+                            <div class="container-card">
+                                <div>
+                                    <img class="card-img" src="./media/etica.png" alt="">
+                                </div> 
+                                <div>
+                                    <h4>Ética</h4>
+                                    <p>Sistema de principios que se aplican a la atención sanitaria y la investigación científica, entre los que encontramos la honestidad, el cuidado, la integridad, la no discriminación y la confidencialidad.</p>
+                                </div>
+                            </div>
+                    </div>
+            </div>
+        </section>
 
         <!-- CONTENERDO PARA MAIN 3 -->
         <div class="main_osocial" id="OBRASOCIAL">
-            Obras Sociales
+            <h2 class="titulo_seccion">Obras Sociales</h2> 
             <br>
-            <ul>
-                <li>OSECAC (Sindicato de empleados de comercio)</li>
-                <li>OSDE (Medicina privada)</li>
-                <li>OSPRERA (Sindicato de trabajadores rurales)</li>
-                <li>UPCN (Sindicato de estatales nacionales)</li>
-                <li>UOCRA (Sindicato trabajadores de la construcción)</li>
-                <li>OSPE (Sindicato de petroleros)</li>
-                <li>OSUTHGRA (Sindicato trabajadores gastronomicos y hotleros)</li>
-                <li>ASE (Personal de dirección de empresas)</li>
-                <li>Mutual Sancor (Medicina privada)</li>
-                <li>UOM (Sindicato de trabajadores metalúrgicos)</li>
-            </ul>
+            <img class="logo_os" src="media/logos os/logo osecac.png" alt="OSECAC (Sindicato de empleados de comercio)">
+            <br>
+            <img class="logo_os" src="media/logos os/logo osde.png" alt="OSDE (Medicina privada)" >
+            <br>
+            <img class="logo_os" src="media/logos os/OSPRERA logo.png" alt="OSPRERA (Sindicato de trabajadores rurales)" >
+            <br>
+            <img class="logo_os" src="media/logos os/logo upcn.png" alt="UPCN (Sindicato de estatales nacionales)" >
+            <br>
+            <img class="logo_os" src="media/logos os/uocra.png" alt="UOCRA (Sindicato trabajadores de la construcción)" >
+            <br>
+            <img class="logo_os" src="media/logos os/ospe.png" alt="OSPE (Sindicato de petroleros)" >
+            <br>
+            <img class="logo_os" src="media/logos os/osuthgra.png" alt="OSUTHGRA (Sindicato trabajadores gastronomicos y hotleros)" >
+            <br>
+            <img class="logo_os" src="media/logos os/logo ase.png" alt="ASE (Personal de dirección de empresas)" >
+            <br>
+            <img class="logo_os" src="media/logos os/Sancor-Salud-va.png" alt="Mutual Sancor (Medicina privada)" >
+            <br>
+            <img class="logo_os" src="media/logos os/uom logo.png" alt="UOM (Sindicato de trabajadores metalúrgicos)" >
+            
         </div>
 
         <!-- CONTENERDO PARA MAIN 4 -->
@@ -111,39 +158,39 @@
 
         <!-- CONTENERDO PARA MAIN 5 -->
         <div class="main_contacto" id="CONTACTO">
-            <form action="">
-                <fieldset>
-                    <legend>Contacto</legend>
-
+            <div>
+                <legend>Contacto</legend>
+                <form action="">
                     <label for="nombre">Nombre y Apellido: </label>
                     <input type="text" name="nombre" id="nombre" placeholder="Ingrese su nombre...">
-
-                    <br>
 
                     <label for="mail">Email: </label>
                     <input type="email" name="email" id="email" placeholder="Ingrese su email...">
 
-                    <br>
-
                     <label for="mensaje">Mensaje: </label>
-                    <br>
                     <textarea name="mensaje" id="mensaje" cols="50" rows="10"></textarea>
-                    <br>
+                    
                     <!-- botones -->
                     <input type="submit" value="Enviar formulario">
-                    <input type="reset" value="Borrar formulario">
-                </fieldset>
-            </form>
-
-            <br>
-            Ubicacion
-            <br>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26274.82920939849!2d-58.42286825180054!3d-34.59521776871684!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccabea17fc80b%3A0x766940296f7cf5cf!2sConsultorios%20Externos!5e0!3m2!1ses!2sar!4v1695494643010!5m2!1ses!2sar" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <input type="reset" value="Borrar formulario">  
+                </form>
+            </div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3348.4657759143074!2d-60.66542795745113!3d-32.93871005999359!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95b7ab503f5a9dbb%3A0xc36a66cf37689b3b!2sHospital%20del%20Centenario!5e0!3m2!1ses!2sar!4v1697464573358!5m2!1ses!2sar" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
 
         <!-- CONTENERDO PARA FOOTER -->
         <div class="footer" id="PIE">
-            Pie de pagina
+            <ul>
+                <li>
+                    <a href="">&copy; Consultorio Médico, 2023</a>
+                </li>
+                <li>
+                    <a href="">Accesibilidad</a>
+                </li>
+                <li>
+                    <a href="">Avisio Legal</a>
+                </li>
+            </ul>
         </div>
     </div>
 

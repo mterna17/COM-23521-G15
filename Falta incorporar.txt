@@ -1,0 +1,8 @@
+Secciones que faltan:
+- Servicios (Alejandro) y turnos (creo que nadie la hacia)
+
+Puntos del TP que faltan:
+- 3. Formulario: Lo tengo que agregar a la parte de contacto (Marcos)
+- 6. Dinamismo visual: Creo que va en la parte de Servicios (Alejandro), sino hay que ver de agregarlo en algun lado.
+- 8. API: Alguien deberia hacer esta parte, no la tenemos todavia. Se me ocurre un calendario que salga de la web con feriados, simple. Para ponerlo en la seccion de turnos asi tiene algo.
+- 12. Documentacion: Hay que armar el pdf.
