@@ -45,18 +45,22 @@ body a{
     font-size: 30px;
     margin: 15px;
 }
+
 .main_nosotros h3{
     font-size: 20px;
-    margin: 15px;
+    margin: 15px 15px 0px 15px;
 }
+
 .main_nosotros p{
     font-size: 14px;
-    margin: 15px;
+    margin: 0px 15px 15px 15px;
 }
+
 .main_nosotros .container-valores{
     display: flex;
     justify-content: center;
 }
+
 .main_nosotros .container-card{
     margin: 15px;
     text-align: center;
@@ -65,10 +69,12 @@ body a{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     width: 30%;
 }
+
 .main_nosotros .container-card h4{
     margin: 4px;
     color: rgb(6, 6, 78);
 }
+
 .main_nosotros .card-img{
     margin-top: 20px;
     width: 60px;
@@ -129,6 +135,9 @@ body a{
 /* DISEÑO RESPONSIVE PARA CELULAR */
 @media screen and (max-width: 480px){
     .contenedor_principal{
+        /*Le saque el margin y el padding al contenedor principal para usar todo el anocho en modo celular*/
+        margin: 0px;
+        padding: 0px;
         grid-template-areas: 
         "menu"
         "nosotros"
@@ -137,6 +146,20 @@ body a{
         "turnos"
         "contacto"
         "footer";
+    }
+    
+    body{
+    /*Le saque el margin y el padding al contenedor principal para usar todo el anocho en modo celular*/
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .main_nosotros .container-valores{
+        flex-direction: column;
+    }
+
+    .main_nosotros .container-card{
+        width: auto;
     }
 }
 
