@@ -1,14 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Consultorio Médico</title>
+    <!-- link a fuente -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,700;1,300&display=swap"
+        rel="stylesheet">
 
     <!-- LINK A CSS -->
     <link rel="stylesheet" href="css/style.css">
 
-    <!-- FLAVICON -->
+    <!-- FAVICON -->
     <link rel="icon" href="media/logo.ico">
 
 </head>
@@ -19,7 +26,7 @@
 
         <!-- CONTENEDOR PARA HEADER -->
         <div class="header_menu" id="MENU">
-            <h2 class="nav_logo">Consultorio Médico</h2>
+            <h1 class="nav_logo">Consultorio Médico</h1>
             
             <!-- MENU HAMBURGUESA -->
             <input type="checkbox" id="menu-check">
@@ -52,36 +59,76 @@
         </div>
 
 
-        <!-- CONTENERDO PARA MAIN 1 -->
-        <div class="main_servicios" id="SERVICIOS">
-            Servicios
-            <br>
-            Especialidades médicas
-            <br>
-            <ul>
-                <li>Anatomía Patologica</li>
-                <li>Bacteriología</li>
-                <li>Cardiología</li>
-                <li>Clinica Médica</li>
-                <li>Dermatología</li>
-                <li>Ecografía</li>
-                <li>Endocrinología</li>
-                <li>Fisioterapia</li>
-                <li>Flebología</li>
-                <li>Fonoaudiología</li>
-                <li>Gastroenterología</li>
-                <li>Ginecología</li>
-                <li>Laboratorio Químico</li>
-                <li>Urología</li>
-                <li>Nutrición</li>
-                <li>Odontología</li>
-                <li>Oftalmología</li>
-                <li>Otorrinolaringología</li>
-                <li>Psicología</li>
-                <li>Psiquiatría</li>
-                <li>Traumatología</li>
-            </ul>
-        </div>
+        <!-- CONTENEDOR PARA MAIN 1 -->
+       
+        <section class="especialidades" id="#SERVICIOS">
+            <div class="esp_container container">
+                <img src="media/arrow-back.svg" class="esp_arrow" id="before">
+                <section class="esp_body esp_body--show" data-id="1">
+                    <div class="esp_texts">
+                        <h2 class="dr_nombre">Dr. Carlos Salusso <span class="dr_esp">Médico Clínico</span></h2>
+                        <p class="dr_cv">
+                            <li>Médico - Universidad Nacional de Córdoba</li>
+                            <li>Máster Analisis Clínicos - Universidad Catolica</li>
+                            <li>Especialista en Cardiología - Universidad de Cordoba</li>
+                        </p>
+                    </div>
+                    <figure class="esp_img">
+                        <img src="media/fotos dr/Dr Carlos Salusso.jpg" class="dr_img">
+                    </figure>
+                </section>
+
+
+                <section class="esp_body" data-id="2">
+                    <div class="esp_texts">
+                        <h2 class="dr_nombre">Dra. Silvia Anzorandia <span class="dr_esp">Odontóloga</span></h2>
+                        <p class="dr_cv">
+                            <li>Odontóloga- Universidad Nacional de La Plata</li>
+                            <li>Especialista en Endodóncia - Maimonides</li>
+                            <li>Especialista en Protesis Dentales - Universidad Kennedy</li>
+                        </p>
+                    </div>
+                    <figure class="esp_img">
+                        <img src="./media/fotos dr/Dra Silvia Anzorandia.jpg" class="dr_img">
+                    </figure>
+                </section>
+
+                <section class="esp_body" data-id="3">
+                    <div class="esp_texts">
+                        <h2 class="dr_nombre">Dra. Evangelina Rivero <span class="dr_esp">Cardióloga</span></h2>
+                        <p class="dr_cv">
+                            <li>Médico - Universidad Nacional de Córdoba
+                            </li>
+                            <li>Especialista en Medicina clínica
+                            </li>
+                            <li>Especialista en Cardiología - Universidad de Córdoba</li>
+                        </p>
+                    </div>
+                    <figure class="esp_img">
+                        <img src="./media/fotos dr/Dra Evangelina Rivero.jpg" class="dr_img">
+                    </figure>
+                </section>
+
+                <section class="esp_body" data-id="4">
+                    <div class="esp_texts">
+                        <h2 class="dr_nombre">Dr. Claudio Pérez <span class="dr_esp">Kinesiólogo</span></h2>
+                        <p class="dr_cv">
+                            <li>Lic. En Kinesiología - Universidad del Litoral</li>
+                            <li>
+                                Especialista en Quiropráxia - Universidad de Navarra</li>
+                        </p>
+                    </div>
+                    <figure class="esp_img">
+                        <img src="./media/fotos dr/Dr claudio perez.jpg" class="dr_img">
+                    </figure>
+                </section>
+
+                <img src="media/arrow-right.svg" class="esp_arrow" id="next">
+
+            </div>
+
+        </section>
+
 
         <!-- CONTENEDOR PARA MAIN 2 -->
         <section class="section-nosotros">
@@ -125,36 +172,39 @@
             </div>
         </section>
 
-        <!-- CONTENERDO PARA MAIN 3 -->
-        <div class="main_osocial" id="OBRASOCIAL">
-            <h2 class="titulo_seccion">Obras Sociales</h2> 
-            <br>
+        <!-- CONTENEDOR PARA MAIN 3 -->
+        <section class="main_osocial" id="OBRASOCIAL">
+            <h2 class="titulo_seccion">Coberturas</h2>
+
             <img class="logo_os" src="media/logos os/logo osecac.png" alt="OSECAC (Sindicato de empleados de comercio)">
             <br>
-            <img class="logo_os" src="media/logos os/logo osde.png" alt="OSDE (Medicina privada)" >
+            <img class="logo_os" src="media/logos os/logo osde.png" alt="OSDE (Medicina privada)">
             <br>
-            <img class="logo_os" src="media/logos os/OSPRERA logo.png" alt="OSPRERA (Sindicato de trabajadores rurales)" >
+            <img class="logo_os" src="media/logos os/OSPRERA logo.png"
+                alt="OSPRERA (Sindicato de trabajadores rurales)">
             <br>
-            <img class="logo_os" src="media/logos os/logo upcn.png" alt="UPCN (Sindicato de estatales nacionales)" >
+            <img class="logo_os" src="media/logos os/logo upcn.png" alt="UPCN (Sindicato de estatales nacionales)">
             <br>
-            <img class="logo_os" src="media/logos os/uocra.png" alt="UOCRA (Sindicato trabajadores de la construcción)" >
+            <img class="logo_os" src="media/logos os/uocra.png" alt="UOCRA (Sindicato trabajadores de la construcción)">
             <br>
-            <img class="logo_os" src="media/logos os/ospe.png" alt="OSPE (Sindicato de petroleros)" >
+            <img class="logo_os" src="media/logos os/ospe.png" alt="OSPE (Sindicato de petroleros)">
             <br>
-            <img class="logo_os" src="media/logos os/osuthgra.png" alt="OSUTHGRA (Sindicato trabajadores gastronomicos y hotleros)" >
+            <img class="logo_os" src="media/logos os/osuthgra.png"
+                alt="OSUTHGRA (Sindicato trabajadores gastronomicos y hotleros)">
             <br>
-            <img class="logo_os" src="media/logos os/logo ase.png" alt="ASE (Personal de dirección de empresas)" >
+            <img class="logo_os" src="media/logos os/logo ase.png" alt="ASE (Personal de dirección de empresas)">
             <br>
-            <img class="logo_os" src="media/logos os/Sancor-Salud-va.png" alt="Mutual Sancor (Medicina privada)" >
+            <img class="logo_os" src="media/logos os/Sancor-Salud-va.png" alt="Mutual Sancor (Medicina privada)">
             <br>
-            <img class="logo_os" src="media/logos os/uom logo.png" alt="UOM (Sindicato de trabajadores metalúrgicos)" >
-            
+            <img class="logo_os" src="media/logos os/uom logo.png" alt="UOM (Sindicato de trabajadores metalúrgicos)">
+
+        </section>
+
+        <!-- CONTENEDOR PARA MAIN 4 -->
+        <div class="main_turnos" id="TURNOS">
+            <h2 class="num_turno">Turnos al 0810 33 SALUD</h2>
         </div>
 
-        <!-- CONTENERDO PARA MAIN 4 -->
-        <div class="main_turnos" id="TURNOS">
-            Turnos
-        </div>
 
         <!-- CONTENERDO PARA MAIN 5 -->
         <div class="main_contacto" id="CONTACTO">
@@ -175,7 +225,7 @@
                     <button type="reset" id="borrar">Borrar formulario</button>
                 </form>
             </div>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3348.4657759143074!2d-60.66542795745113!3d-32.93871005999359!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95b7ab503f5a9dbb%3A0xc36a66cf37689b3b!2sHospital%20del%20Centenario!5e0!3m2!1ses!2sar!4v1697464573358!5m2!1ses!2sar" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe class="plano" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3348.4657759143074!2d-60.66542795745113!3d-32.93871005999359!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95b7ab503f5a9dbb%3A0xc36a66cf37689b3b!2sHospital%20del%20Centenario!5e0!3m2!1ses!2sar!4v1697464573358!5m2!1ses!2sar" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
 
         <!-- CONTENERDO PARA FOOTER -->
@@ -198,5 +248,10 @@
 
     <!-- Vinculo a JavaScript -->
     <script src="./js/app.js"></script>
+
+    <!-- JS slider -->
+    <script src="./js/slider.js"></script>
+
 </body>
+
 </html>
