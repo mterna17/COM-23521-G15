@@ -8,15 +8,18 @@
     --colorwhite: rgb(255,255,255);
     --colorblack: rgb(0,0,0);
     --color1: rgb(103,142,149);
-    --color2: rgb(182,167,155);
-    --color3: rgb(230,191,174);
+    --color2: rgb(140, 180, 131);
+    --color3: rgb(91, 222, 206);
     --color4: rgb(226,226,190);
     --color5: rgb(212,233,228);
     --colortexto: rgb(6,6,78);
-}
+}/* font family */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,700;1,300&display=swap');
 
 body{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Poppins', sans-serif;
+font-family: 'Roboto', sans-serif;
     color: var(--colortexto);
 }
 
@@ -24,13 +27,84 @@ body a{
     color: var(--colortexto);   
 }
 
-.header_menu {grid-area: menu;}
+.header_menu {grid-area: menu;
+    background: #BBD2C5;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #292E49, #536976, #BBD2C5);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #292E49, #536976, #BBD2C5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    }
 
-.header_menu h2{
-    color: var(--colortexto);    
+.header_menu h1{
+    color: var(--colorwhite);    
 }
 
-.main_servicios {grid-area: servicios;}
+
+
+/* seccion especialidades */
+
+.especialidades{
+    grid-area: servicios;
+    background-color: #e5e5f7;
+opacity: 0.8;
+background-image: radial-gradient(rgba(140,180,131,1) 0.5px, #e5e5f7 0.5px);
+background-size: 10px 10px;
+}
+
+.esp_container{
+    height: auto;
+    display: grid;
+    grid-template-columns: 50px 1fr 50px ;
+    align-items: center;
+}
+
+.esp_body{
+   display: grid; 
+   grid-template-columns: 1fr max-content ;
+   justify-content: space-between ;
+   padding: 10px;
+   align-items: center;
+   gap: 1em;
+   grid-column: 2/3;
+   grid-row: 1/2 ;
+   opacity: 0;
+   pointer-events: none;
+}
+
+.esp_body--show{
+    pointer-events: unset;
+    opacity: 1;
+    transition: opacity 1.5s ease-in-out;
+}
+
+.dr_img{
+    width: 250px;
+    height: 250px;
+    padding: 10px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: 15% 30%;
+}
+
+.esp_texts{
+    margin-left: 30px;
+    max-width: 95%;
+    color: #03210a;
+}
+
+.dr_esp{
+    background-color:var(--color3);
+    color:#fff;
+    display: inline-block;
+    padding: 5px;
+    font-weight: 300;
+
+}
+
+.esp_arrow{
+    width: 90%;
+    cursor: pointer;
+}
+
+/* seccion nosotros */
 
 .section-nosotros {
     grid-area: nosotros;
@@ -83,6 +157,10 @@ body a{
 
 .main_osocial {grid-area: osocial;}
 
+/* coberturas */
+
+.main_osocial {grid-area: osocial;}
+
 .main_osocial h2{
     font-size: 30px;
     margin: 15px;
@@ -90,16 +168,39 @@ body a{
 
 .logo_os { max-height: 80px; max-width: 300px ; padding: 10px;}
 
-.titulo_seccion {max-width: 400px; padding: 20px; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ; color: rgb(6, 6, 78);}
+/* seccion turnos */
 
 .main_turnos {grid-area: turnos;}
+
+.main_turnos h2{
+    color: #fff;
+    background-color: var(--colortexto);
+    text-align: center;
+    font-size: 30px;
+    padding: 20px;
+    margin: 5px;
+}
+
+/* seccion contacto */
 
 .main_contacto {
     grid-area: contacto;
     background: var(--color2);
 }
 
-.footer {grid-area: footer;}
+.plano{
+    margin-top: 20px;
+    max-height: 500px;
+}
+
+/* footer */
+
+.footer {grid-area: footer;
+    background: #BBD2C5;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #292E49, #536976, #BBD2C5);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #292E49, #536976, #BBD2C5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */}
+
+
 
 .contenedor_principal{
     display: grid;
@@ -108,15 +209,15 @@ body a{
     margin: 0 auto;
     gap: 10px;
     grid-template-areas:
-        "menu menu menu menu"
-        "nosotros nosotros osocial osocial"
-        "servicios servicios osocial osocial"
-        "turnos turnos osocial osocial"
-        "contacto contacto contacto contacto"
-        "footer footer footer footer";
-    grid-gap: 10px;
-    background-color: var(--color3);
-    padding: 10px;
+    "menu menu menu menu"
+    "nosotros nosotros osocial osocial"
+    "turnos turnos osocial osocial"
+    "servicios servicios servicios servicios"
+    "contacto contacto contacto contacto"
+    "footer footer footer footer";
+grid-gap: 10px;
+background-color: var(--colorwhite);
+padding: 10px;
 }
 
 /* DISEÑO RESPONSIVE PARA TABLET */
@@ -125,7 +226,7 @@ body a{
         grid-template-areas:
         "menu menu menu"
         "nosotros nosotros nosotros"
-        "servicios servicios osocial"
+        "servicios servicios servicios"
         "turnos turnos osocial"
         "contacto contacto contacto"
         "footer footer footer";
