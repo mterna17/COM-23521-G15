@@ -104,6 +104,35 @@ background-size: 10px 10px;
     cursor: pointer;
 }
 
+/* seccion servicios */
+
+.serv_areas {
+    grid-area: serv_areas;
+    grid-column: span 4; 
+    grid-row: span 2;
+}
+
+#img_serv{ 
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    grid-template-rows: repeat(2, auto); 
+    gap: 20px;
+}
+
+#img_serv img{
+    width: 50%;
+    transition: all 300ms;
+    position: relative;
+    align-items: center;
+
+}
+
+#img_serv img:hover {
+    transform: scale(1.10);
+}
+
+
+
 /* seccion nosotros */
 
 .section-nosotros {
@@ -213,6 +242,7 @@ background-size: 10px 10px;
     "nosotros nosotros osocial osocial"
     "turnos turnos osocial osocial"
     "servicios servicios servicios servicios"
+    "serv_areas serv_areas serv_areas serv_areas"
     "contacto contacto contacto contacto"
     "footer footer footer footer";
 grid-gap: 10px;
@@ -227,6 +257,7 @@ padding: 10px;
         "menu menu menu"
         "nosotros nosotros nosotros"
         "servicios servicios servicios"
+        "serv_areas serv_areas serv_areas"
         "turnos turnos osocial"
         "contacto contacto contacto"
         "footer footer footer";
@@ -243,6 +274,7 @@ padding: 10px;
         "menu"
         "nosotros"
         "servicios"
+        "serv_areas"
         "osocial"
         "turnos"
         "contacto"
