@@ -27,4 +27,15 @@ formulario.onsubmit = evento => {
     formulario.submit();
 };
 
-
+//Consumo de API para las direcciones y telefonos de la seccion turnos
+fetch('https://jsonplaceholder.typicode.com/users')
+  .then(response => response.json())
+  .then(data => {
+    const elemento = document.getElementById("container-turnos");
+    for (let i = 0; i < 3; i++) {
+        elemento.innerHTML += `
+            <p>Direccion: ${data[i].address.suite}</p>
+            <p>Telefono: ${data[i].phone}</p><hr>
+        `;
+    }
+  }).catch(error => console.log("Error", error));
