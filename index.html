@@ -16,51 +16,117 @@
     <link rel="stylesheet" href="css/style.css">
 
     <!-- FAVICON -->
-    <link rel="icon" href="media/logo.ico">
+    <link rel="icon" href="media/favicon-16x16.png">
 
 </head>
-<body>
 
-    <!-- CONTENEDOR PARA TODA LA PAGINA -->
-    <div class="contenedor_principal">
+<body>
+    <!-- <-- CONTENEDOR PARA TODA LA PÁGINA -->
+    <DIV class="contenedor_principal">
+
 
         <!-- CONTENEDOR PARA HEADER -->
         <div class="header_menu" id="MENU">
-            <h1 class="nav_logo">Consultorio Médico</h1>
-            
+            <img class="nav_logo" src="media/logo cm.png" alt="LOGO">
+
+
             <!-- MENU HAMBURGUESA -->
+
             <input type="checkbox" id="menu-check">
             <label id="menu-ham" for="menu-check">
                 <span id="abrir-menu">&#9776;</span>
                 <span id="cerrar-menu">X</span>
             </label>
-            <nav>
+            <nav class="menu_links">
                 <ul>
                     <li>
-                        <a href="#MENU" class="nav_link">Inicio</a>
-                    </li>              
-                    <li>
-                        <a href="#NOSOTROS" class="nav_link">¿Quienes Somos?</a>
+                        <a href="#MENU" class="nav_link">INICIO</a>
                     </li>
                     <li>
-                        <a href="#SERVICIOS" class="nav_link">Especialidades Médicas</a>
+                        <a href="#NOSOTROS" class="nav_link">¿QUIÉNES SOMOS?</a>
                     </li>
                     <li>
-                        <a href="#OBRASOCIAL" class="nav_link">Coberturas</a>
+                        <a href="#SERVICIOS" class="nav_link">TURNOS Y SERVICIOS</a>
                     </li>
                     <li>
-                        <a href="#TURNOS" class="nav_link">Turnos</a>
+                        <a href="#OBRASOCIAL" class="nav_link">COBERTURAS</a>
                     </li>
                     <li>
-                        <a href="#CONTACTO" class="nav_link">Contacto</a>
+                        <a href="#PROF" class="nav_link">PROFESIONALES</a>
                     </li>
-                </ul>  
+                    <li>
+                        <a href="#CONTACTO" class="nav_link">CONTACTO</a>
+                    </li>
+                </ul>
             </nav>
         </div>
 
+        <!-- SEPARADOR -->
 
-        <!-- CONTENERDO PARA MAIN 1 -->
-         <section class="especialidades" id="#SERVICIOS">
+        <section class="separador">
+
+            <img class="img_sep" src="media/separador.jpeg" alt="separador">
+
+        </section>
+
+        <!-- CONTENEDOR SECCIÓN NOSOTROS -->
+        <section class="section-nosotros">
+            <div class="main_nosotros" id="NOSOTROS">
+                <h2 class="titulo_seccion">¿Quienes somos?</h2>
+                <p>Somos un consultorio que se desarrolla en el área ambulatoria del Hospital, ofreciendo atención
+                    brindada por profesionales médicos de diferentes especialidades con la finalidad de satisfacer la
+                    experiencia del paciente, su entorno familiar y el equipo de salud.<br>Nos encontramos comprometidos
+                    con nuestros valores a dedicar un cuidado integral de la salud, calidad de atención centrada en las
+                    personas y seguridad del paciente, como tambien hacia la comunidad.</p>
+                <h3>Misión</h3>
+                <p>Promovemos el empoderamiento de las personas en la coproducción de la toma de decisiones, sustentadas
+                    en las mejores prácticas, favoreciendo la autonomía y respetando las diversidades.</p>
+                <h3>Visión</h3>
+                <p>Continuar siendo una institución innovadora comprometido con el desarrollo de gestión integrada por
+                    procesos en el marco del sistema de gestión de calidad y el progreso en el respeto con las
+                    diversidades.</p>
+                <h3>Valores</h3>
+                <div class="container-valores">
+                    <div class="container-card">
+                        <div>
+                            <img class="card-img" src="./media/accesibilidad.png" alt="">
+                        </div>
+                        <div>
+                            <h4>Accesibilidad</h4>
+                            <p>Garantizar que cualquier persona pueda disponer y utilizar los servicios en igualdad de
+                                condiciones y en función a sus necesidades.</p>
+                        </div>
+                    </div>
+                    <div class="container-card">
+                        <div>
+                            <img class="card-img" src="./media/transparencia.png" alt="">
+                        </div>
+                        <div>
+                            <h4>Transparencia</h4>
+                            <p>Facilitar el acceso a la información, con la convicción de que la información que posee
+                                el Estado debe ser accesible y pública garantizando la protección de los datos de las
+                                personas que la ley dicta.</p>
+                        </div>
+                    </div>
+                    <div class="container-card">
+                        <div>
+                            <img class="card-img" src="./media/etica.png" alt="">
+                        </div>
+                        <div>
+                            <h4>Ética</h4>
+                            <p>Sistema de principios que se aplican a la atención sanitaria y la investigación
+                                científica, entre los que encontramos la honestidad, el cuidado, la integridad, la no
+                                discriminación y la confidencialidad.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- CONTENEDOR PROFESIONALES-->
+        <section class="profesionales" id="PROF">
+            <h1 class="titulo_seccion">Nuestros profesionales</h1>
             <div class="esp_container container">
                 <img src="media/arrow-back.svg" class="esp_arrow" id="before">
                 <section class="esp_body esp_body--show" data-id="1">
@@ -125,85 +191,65 @@
                 <img src="media/arrow-right.svg" class="esp_arrow" id="next">
 
             </div>
-            
+
 
         </section>
 
-        <div class="serv_area">
+
+        <!-- CONTENEDOR SERVICIOS -->
+
+        <section class="serv_area" id="SERVICIOS">
+            <h1 class="titulo_seccion">Turnos y servicios</h1>
+            <br>
             <div id="img_serv">
-                 <div><img src="media/servicios/bactereo.png" alt="Bacteriología">
-                 <p>Bactereologia</p></div>
-                 
-                 <div><img src="media/servicios/cardio.png" alt="Cardiología">
-                 <p>Cardiologia</p></div>
 
-                 <div><img src="media/servicios/clinica.png" alt="Clinica Médica">
-                 <p>Clinica Medica</p></div>
-
-                 <div><img src="media/servicios/dermatologo.png" alt="Dermatología">
-                 <p>Dermatología</p></div>
-
-                 <div><img src="media/servicios/eco.png" alt="Ecografía">
-                 <p>Ecografía</p></div>
-
-                 <div><img src="media/servicios/endocri.png" alt="Endocrinología">
-                 <p>Endocrinología</p></div>
-
-                 <div><img src="media/servicios/fisio.png" alt="Fisioterapia">
-                 <p>Fisioterapia</p></div>
-
-                 <div><img src="media/servicios/fono.png" alt="Fonoaudiología">
-                 <p>Fonoaudiología</p></div>
-
-                 
-             </div>
-        </div>
-
-
-
-        <!-- CONTENEDOR PARA MAIN 2 -->
-        <section class="section-nosotros">
-            <div class="main_nosotros" id="NOSOTROS">
-                <h2>¿Quienes somos?</h2>
-                <p>Somos un consultorio que se desarrolla en el área ambulatoria del Hospital, ofreciendo atención brindada por profesionales médicos de diferentes especialidades con la finalidad de satisfacer la experiencia del paciente, su entorno familiar y el equipo de salud.<br>Nos encontramos comprometidos con nuestros valores a dedicar un cuidado integral de la salud, calidad de atención centrada en las personas y seguridad del paciente, como tambien hacia la comunidad.</p>
-                <h3>Misión</h3>
-                <p>Promovemos el empoderamiento de las personas en la coproducción de la toma de decisiones, sustentadas en las mejores prácticas, favoreciendo la autonomía y respetando las diversidades.</p>
-                <h3>Visión</h3>
-                <p>Continuar siendo una institución innovadora comprometido con el desarrollo de gestión integrada por procesos en el marco del sistema de gestión de calidad y el progreso en el respeto con las diversidades.</p>
-                <h3>Valores</h3>
-                <div class="container-valores">
-                    <div class="container-card">
-                        <div>
-                            <img class="card-img" src="./media/accesibilidad.png" alt="">
-                        </div>
-                        <div>
-                            <h4>Accesibilidad</h4>
-                            <p>Garantizar que cualquier persona pueda disponer y utilizar los servicios en igualdad de condiciones y en función a sus necesidades.</p>
-                        </div>
-                    </div>
-                    <div class="container-card">
-                        <div>
-                            <img class="card-img" src="./media/transparencia.png" alt="">
-                        </div>
-                        <div>
-                            <h4>Transparencia</h4>
-                            <p>Facilitar el acceso a la información, con la convicción de que la información que posee el Estado debe ser accesible y pública garantizando la protección de los datos de las personas que la ley dicta.</p>
-                        </div>
-                    </div>
-                    <div class="container-card">
-                        <div>
-                            <img class="card-img" src="./media/etica.png" alt="">
-                        </div> 
-                        <div>
-                            <h4>Ética</h4>
-                            <p>Sistema de principios que se aplican a la atención sanitaria y la investigación científica, entre los que encontramos la honestidad, el cuidado, la integridad, la no discriminación y la confidencialidad.</p>
-                        </div>
-                    </div>
+                <div><img src="media/servicios/bactereo.png" alt="Bacteriología">
+                    <p>Bacteriologia</p>
                 </div>
+
+                <div><img src="media/servicios/cardio.png" alt="Cardiología">
+                    <p>Cardiologia</p>
+                </div>
+
+                <div><img src="media/servicios/clinica.png" alt="Clinica Médica">
+                    <p>Clinica Medica</p>
+                </div>
+
+                <div><img src="media/servicios/dermatologo.png" alt="Dermatología">
+                    <p>Dermatología</p>
+                </div>
+
+                <div><img src="media/servicios/eco.png" alt="Ecografía">
+                    <p>Ecografía</p>
+                </div>
+
+                <div><img src="media/servicios/endocri.png" alt="Endocrinología">
+                    <p>Endocrinología</p>
+                </div>
+
+                <div><img src="media/servicios/fisio.png" alt="Fisioterapia">
+                    <p>Fisioterapia</p>
+                </div>
+
+                <div><img src="media/servicios/fono.png" alt="Fonoaudiología">
+                    <p>Fonoaudiología</p>
+                </div>
+
+
             </div>
+
+            <div class="main_turnos" id="TURNOS">
+                <h3 class="num_turno">Para solicitar turnos, acercate o llama a nuestras sucursales:</h3>
+
+                <div id="container-turnos"></div>
+            </div>
+            <div class="main_turnos">
+                
+            </div>
+
         </section>
 
-        <!-- CONTENEDOR PARA MAIN 3 -->
+        <!-- SECCIÓN COBERTURAS -->
         <section class="main_osocial" id="OBRASOCIAL">
             <h2 class="titulo_seccion">Coberturas</h2>
 
@@ -231,15 +277,7 @@
 
         </section>
 
-        <!-- CONTENEDOR PARA MAIN 4 -->
-        <div class="main_turnos" id="TURNOS">
-            <h2 class="num_turno">Turnos</h2>
-            <p style="text-align: left;">Para solicitar turnos, acercate a las siguientes sucursales o llamá a los siguiente telefonos:</p>
-            <div id="container-turnos"></div>
-        </div>
-
-
-        <!-- CONTENERDO PARA MAIN 5 -->
+        <!-- CONTENEDOR PARA CONTACTO -->
         <div class="main_contacto" id="CONTACTO">
             <div>
                 <legend>Contacto</legend>
@@ -252,15 +290,17 @@
 
                     <label for="mensaje">Mensaje: </label>
                     <textarea name="mensaje" id="mensaje" cols="50" rows="10"></textarea>
-                    
+
                     <!-- botones -->
                     <button type="submit" id="enviar">Enviar formulario</button>
                     <button type="reset" id="borrar">Borrar formulario</button>
                 </form>
             </div>
-            <iframe class="plano" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3348.4657759143074!2d-60.66542795745113!3d-32.93871005999359!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95b7ab503f5a9dbb%3A0xc36a66cf37689b3b!2sHospital%20del%20Centenario!5e0!3m2!1ses!2sar!4v1697464573358!5m2!1ses!2sar" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe class="plano"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3348.4657759143074!2d-60.66542795745113!3d-32.93871005999359!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95b7ab503f5a9dbb%3A0xc36a66cf37689b3b!2sHospital%20del%20Centenario!5e0!3m2!1ses!2sar!4v1697464573358!5m2!1ses!2sar"
+                width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
-
         <!-- CONTENERDO PARA FOOTER -->
         <div class="footer" id="PIE">
             <ul>
@@ -282,7 +322,7 @@
     <!-- Vinculo a JavaScript -->
     <script src="./js/app.js"></script>
 
-    <!-- JS slider -->
+    <!-- Vínculo a JS slider -->
     <script src="./js/slider.js"></script>
 
 </body>
